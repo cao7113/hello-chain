@@ -1,0 +1,15 @@
+# https://taskfile.dev
+version: "3"
+tasks:
+  go-sepolia: npx hardhat run scripts/deploy.js --network sepolia
+  go: npx hardhat run scripts/deploy.js
+  t: npx hardhat test
+  build: npx hardhat compile
+
+  setup:
+    cmds:
+      - |
+        npm init
+        npm install --save-dev hardhat
+        npx hardhat init
+        npm install --save-dev @nomicfoundation/hardhat-toolbox
