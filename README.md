@@ -1,3 +1,5 @@
-# Hello Hardhat
+# Hello Blockchain
 
-https://hardhat.org/tutorial
+- https://github.com/NomicFoundation/hardhat-boilerplate
+- deploy erc721
+- hardhat upload contract source to etherscan

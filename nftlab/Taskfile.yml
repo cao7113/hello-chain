@@ -3,13 +3,15 @@ version: "3"
 tasks:
   dep-sepolia: npx hardhat run scripts/deploy.js --network sepolia
   dep-local: npx hardhat run scripts/deploy.js
-  test: npx hardhat test
+  t: npx hardhat test
   build: npx hardhat compile
 
   setup:
     cmds:
       - |
-        npm init -y
+        npm init
         npm install --save-dev hardhat
         npx hardhat init
         npm install --save-dev @nomicfoundation/hardhat-toolbox
+
+        npm install @openzeppelin/contracts

@@ -1,6 +1,5 @@
-require("@nomicfoundation/hardhat-toolbox");
-// import { vars } from "hardhat/config";
-const { vars } = require("hardhat/config");
+import { HardhatUserConfig, vars } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
 
 // Go to https://infura.io, sign up, create a new API key
 // in its dashboard, and replace "KEY" with it
@@ -14,14 +13,19 @@ const INFURA_API_KEY = vars.get("INFURA_API_KEY");
 // Beware: NEVER put real Ether into testing accounts
 const deployer = vars.get("SEPOLIA_PRIVATE_KEY");
 
+// https://hardhat.org/hardhat-runner/docs/config
 
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
+const config: HardhatUserConfig = {
   solidity: "0.8.19",
+  defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+    },
     sepolia: {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
-      accounts: [deployer]
+      accounts: [deployer],
     }
   }
 };
+
+export default config;

@@ -1,0 +1,18 @@
+# https://taskfile.dev
+version: "3"
+tasks:
+  dep-sepolia: npx hardhat run scripts/deploy.ts --network sepolia
+  dep-local: npx hardhat run scripts/deploy.ts
+  test: npx hardhat test
+  build: npx hardhat compile
+  show-vars: npx hardhat vars setup
+
+  setup:
+    cmds:
+      - |
+        npm init -y
+        npm install --save-dev hardhat
+        npx hardhat init
+        # select create typescript project
+
+        npm install @openzeppelin/contracts
