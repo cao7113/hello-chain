@@ -4,9 +4,8 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MyNFT is ERC721Enumerable, Ownable {
-    using SafeMath for uint256;
-
+// Make Fun with NFT
+contract FunNFT is ERC721Enumerable, Ownable {
     // Counter for token IDs
     uint256 private _tokenIdCounter;
 
@@ -23,9 +22,10 @@ contract MyNFT is ERC721Enumerable, Ownable {
         string memory name,
         string memory symbol,
         string memory baseTokenURI
-    ) ERC721(name, symbol) {
+    ) ERC721(name, symbol) Ownable(msg.sender) {
         _baseTokenURI = baseTokenURI;
-        _tokenIdCounter = 0;
+        _minters[msg.sender] = true;
+        _tokenIdCounter = 1;
     }
 
     // Function to set the base URI for metadata
@@ -34,11 +34,14 @@ contract MyNFT is ERC721Enumerable, Ownable {
     }
 
     // Function to mint new tokens, only callable by a minter
-    function mint(address to) external {
+    function mint(address to, uint256 amount) external {
         require(_minters[msg.sender], "Caller is not a minter");
-        _safeMint(to, _tokenIdCounter);
-        emit Minted(to, _tokenIdCounter);
-        _tokenIdCounter = _tokenIdCounter.add(1);
+
+        for (uint256 i = 0; i < amount; i++) {
+            _safeMint(to, _tokenIdCounter);
+            emit Minted(to, _tokenIdCounter);
+            _tokenIdCounter = _tokenIdCounter + 1;
+        }
     }
 
     // Function to add a new minter, only callable by the contract owner
@@ -59,5 +62,15 @@ contract MyNFT is ERC721Enumerable, Ownable {
     // Override _baseURI to return the base URI for metadata
     function _baseURI() internal view override returns (string memory) {
         return _baseTokenURI;
+    }
+
+    // Get base URI
+    function baseURI() external view returns (string memory) {
+        return _baseTokenURI;
+    }
+
+    // Get next token id
+    function nextTokenId() external view returns (uint256) {
+        return _tokenIdCounter;
     }
 }

@@ -1,17 +1,22 @@
 # https://taskfile.dev
 version: "3"
 tasks:
-  dep-sepolia: npx hardhat run scripts/deploy.js --network sepolia
-  dep-local: npx hardhat run scripts/deploy.js
+  dep-sepolia: npx hardhat run scripts/deploy.ts --network sepolia
+  dep-local: npx hardhat run scripts/deploy.ts
   t: npx hardhat test
+  sh: npx hardhat console
   build: npx hardhat compile
+  mint: npx hardhat run scripts/mint.ts --network sepolia
+  accounts: npx hardhat accounts
 
   setup:
     cmds:
       - |
-        npm init
+        npm init -y
         npm install --save-dev hardhat
         npx hardhat init
-        npm install --save-dev @nomicfoundation/hardhat-toolbox
 
         npm install @openzeppelin/contracts
+
+        npm install --save-dev @solidstate/hardhat-accounts
+        npm install --save-dev hardhat-sourcify
