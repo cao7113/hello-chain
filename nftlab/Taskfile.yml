@@ -3,11 +3,12 @@ version: "3"
 tasks:
   dep-sepolia: npx hardhat run scripts/deploy.ts --network sepolia
   dep-local: npx hardhat run scripts/deploy.ts
-  t: npx hardhat test
+  t: REPORT_GAS=true npx hardhat test
   sh: npx hardhat console
   build: npx hardhat compile
   mint: npx hardhat run scripts/mint.ts --network sepolia
   accounts: npx hardhat accounts
+  cover: npx hardhat coverage
 
   setup:
     cmds:
