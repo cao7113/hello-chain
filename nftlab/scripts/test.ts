@@ -1,13 +1,6 @@
-// npx hardhat run scripts/t.ts
+// npx hardhat run scripts/test.ts
 
 import { ethers } from "hardhat";
-
-// const fundme = await ethers.getContract("FundMe");
-// const contractInstance = await ethers.getContractAt("contracts/XYZ.sol:ContractName", contractAddress);
-// fs.writeFileSync(
-//   frontEndAbiFile,
-//   fundme.interface.format(ethers.utils.FormatTypes.json)
-// )
 
 async function main() {
   const [deployer] = await ethers.getSigners();
@@ -19,13 +12,6 @@ async function main() {
   const tokenId = 5;
   const tx = await contract.transferFrom(deployer.address, alice, tokenId)
   console.log(`transfer token id ${tx}`);
-
-  // console.log(`query baseURI: ${baseUri}`);
-
-  // console.log(`contract: ${await contract.balanceOf(alice)}`);
-  // console.log(
-  //   `deployed FunNFT to ${nft.target} with ["${name}", "${symbol}", "${baseUri}"] by deployer account: ${deployer.address}`
-  // );
 }
 
 // We recommend this pattern to be able to use async/await everywhere

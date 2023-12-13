@@ -1,8 +1,9 @@
 # https://taskfile.dev
 version: "3"
 tasks:
-  dep-sepolia: npx hardhat run scripts/deploy.ts --network sepolia
-  dep-local: npx hardhat run scripts/deploy.ts
+  dp-sepolia: npx hardhat run scripts/deploy.ts --network sepolia
+  dp-local: npx hardhat run scripts/deploy.ts
+  dplog: tail -30 scripts/deploy.md
   t: REPORT_GAS=true npx hardhat test
   sh: npx hardhat console
   build: npx hardhat compile

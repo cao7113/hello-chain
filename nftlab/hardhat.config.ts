@@ -1,3 +1,5 @@
+
+// import { ethers } from "hardhat";
 import { HardhatUserConfig, vars } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
@@ -29,7 +31,23 @@ import "@solidstate/hardhat-accounts";
 //   }
 // });
 
-import "hardhat-sourcify";
+// npx hardhat mint --network hardhat --contract 0x1254B32C48b9Ddf9314b8d4f3Fa52c31208f03f4
+task("mint-nft", "mint NFT on diffrent network")
+  .addParam("contract", "NFT contract's address")
+  // .addParam("count", "mint count")
+  .setAction(async (taskArgs) => {
+    // TODO: get network and browser url
+    // console.log(`network: ${network.name} args: ${JSON.stringify(config, null, 3)}`);
+    // process.exit(10);
+    const [deployer] = await ethers.getSigners();
+    const contractAddr = taskArgs.contract;
+    const contract = await ethers.getContractAt("FunNFT", contractAddr);
+    const mintResult = await contract.mint(deployer.address, 3);
+    console.log(`mint result: ${JSON.stringify(mintResult, null, 3)}`);
+  });
+
+// not good
+// import "hardhat-sourcify";
 
 // https://hardhat.org/hardhat-runner/docs/config
 
@@ -49,6 +67,10 @@ const config: HardhatUserConfig = {
       url: "https://testrpc.x1.tech",
       accounts: [deployer]
     },
+    manta: {
+      url: "https://pacific-rpc.manta.network/http",
+      accounts: [deployer]
+    }
   },
   etherscan: {
     apiKey: etherscan_api_key,
