@@ -8,15 +8,12 @@ import * as fs from 'fs';
 async function main() {
   const [deployer] = await ethers.getSigners();
 
-  console.log(`begin deploying FunNFT with deployer: ${deployer.address}`);
-  const name = "Make fun with NFT";
-  const symbol = "FunNFT";
-  const baseUri = "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/";
+  console.log(`begin deploying WUSDC with deployer: ${deployer.address}`);
 
-  const nft = await ethers.deployContract("FunNFT", [name, name, baseUri], {});
+  const nft = await ethers.deployContract("WUSDC", [], {});
   await nft.waitForDeployment();
 
-  const contentToAppend = `\n\n## Network: ${network.name} Time: ${new Date()} \ncontract-address: ${nft.target} \nInfo: [\"${name}", "${symbol}", "${baseUri}"] \ndeployer account: ${deployer.address}`;
+  const contentToAppend = `\n\n## Network: ${network.name} Time: ${new Date()} \n WUSDC contract-address: ${nft.target} \ndeployer account: ${deployer.address}`;
   console.log(contentToAppend);
 
   if (network.name != "hardhat") {

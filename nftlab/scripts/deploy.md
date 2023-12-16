@@ -47,23 +47,61 @@ contract-address: 0xd674343b52Bb120cefcBe0110E75536A92Bed740
 Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"]
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
 
+## Network: sepolia Time: Mon Dec 11 2023 20:28:51 GMT+0800 (China Standard Time)
 
-## Network: sepolia Time: Mon Dec 11 2023 20:28:51 GMT+0800 (China Standard Time) 
-contract-address: 0xA1cC8E4721603CdD973940fC678d341046fCb5E8 
+contract-address: 0xA1cC8E4721603CdD973940fC678d341046fCb5E8
+Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"]
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: x1 Time: Mon Dec 11 2023 21:17:22 GMT+0800 (China Standard Time)
+
+contract-address: 0xb08FC3DD25B2Bfb5Df3306537226d64Cf778f6A9
+Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"]
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: x1 Time: Tue Dec 12 2023 09:13:28 GMT+0800 (China Standard Time)
+
+contract-address: 0x9e1f1AB94BC3F2A4D1966F8F7c36c69dB651d45F
+Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"]
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: sepolia Time: Wed Dec 13 2023 08:50:39 GMT+0800 (China Standard Time)
+
+contract-address: 0x23BE5a690D781200c5D697DB24364bA1CF79f08A
+Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"]
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: x1 Time: Wed Dec 13 2023 17:57:43 GMT+0800 (China Standard Time)
+
+contract-address: 0x8806C3ca36B712539121E0eC0D7179cb1D81659c
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: x1 Time: Wed Dec 13 2023 18:32:50 GMT+0800 (China Standard Time)
+
+contract-address: 0x2396B08D7338AB724A58766F1836805e7ba302CB
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: sepolia Time: Wed Dec 13 2023 18:38:15 GMT+0800 (China Standard Time)
+
+contract-address: 0x0Dcec9f84499d24fe9A2798b9f0Be0faf78D7D40
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+
+## Network: x1 Time: Wed Dec 13 2023 19:03:10 GMT+0800 (China Standard Time) 
+contract-address: 0x467c009d989F9F4B3D0a92360E0e50CAdb131d02 
 Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"] 
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
 
-## Network: x1 Time: Mon Dec 11 2023 21:17:22 GMT+0800 (China Standard Time) 
-contract-address: 0xb08FC3DD25B2Bfb5Df3306537226d64Cf778f6A9 
+## Network: x1 Time: Wed Dec 13 2023 20:47:52 GMT+0800 (China Standard Time) 
+contract-address: 0xcf49ad611597474c7A2298e86fd66DB01192C473 
 Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"] 
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
 
-## Network: x1 Time: Tue Dec 12 2023 09:13:28 GMT+0800 (China Standard Time) 
-contract-address: 0x9e1f1AB94BC3F2A4D1966F8F7c36c69dB651d45F 
+## Network: fairtest Time: Fri Dec 15 2023 10:03:22 GMT+0800 (China Standard Time) 
+contract-address: 0x179Db0b815B8E8c280C2075D266aED288340faa1 
 Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"] 
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
 
-## Network: sepolia Time: Wed Dec 13 2023 08:50:39 GMT+0800 (China Standard Time) 
-contract-address: 0x23BE5a690D781200c5D697DB24364bA1CF79f08A 
-Info: ["Make fun with NFT", "FunNFT", "https://api.dracoo.finance/api/v1/dm/contracts/metadata/surprise/"] 
+## Network: zkfair-testnet Time: Sat Dec 16 2023 22:58:18 GMT+0800 (China Standard Time) 
+WUSDC contract-address: 0x9e1f1AB94BC3F2A4D1966F8F7c36c69dB651d45F 
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2

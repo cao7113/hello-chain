@@ -1,15 +1,23 @@
 # Chain Networks
 
+## General block explorer
+
+https://eth-sepolia.blockscout.com/
+
 ## Eth Sepolia https://chainlist.org/chain/11155111
 
-Sepolia 好使
+https://www.okx.com/x1/faucet/sepoliafaucet
+挺好使, 可申请 USDC 等其它币
+
 https://www.infura.io/faucet/sepolia
+infura 好使, 0.5 ETH
+
+https://sepoliafaucet.com/
+偶尔成功，凭运气, alchemy 账号登录
 
 https://faucet.quicknode.com/ethereum/sepolia
 A user's wallet must hold at least 0.001 ETH on Ethereum Mainnet to use the EVM faucets.
-
-https://sepoliafaucet.com/
-不是很好使，总失败
+一次只给 0.1Eth
 
 https://faucetlink.to/sepolia
 
@@ -24,6 +32,7 @@ Faucet
 https://www.okx.com/x1/docs/getting-started/user-guide/get-testnet-okb-from-faucet
 https://www.okx.com/x1/faucet/sepoliafaucet
 挺好使
+
 https://www.okx.com/x1/docs/getting-started/user-guide/bridge-testnet-okb-from-goerli-to-x1
 
 ## Scroll Sepolia https://chainlist.org/chain/534351
@@ -36,3 +45,9 @@ https://pacific-info.manta.network/
 https://pacific-explorer.manta.network/address/0x5cc0c7D237C1e0279bDe1E851e6cAfB8Cfe15be3
 alienswap module
 https://pacific-explorer.manta.network/address/0x3953c18Bb9BBb8B43F9e4Adf6E86B19bd020F4f7
+
+## Chiliz
+
+https://docs.chiliz.com/chiliz-chain-mainnet/build-on-chiliz-chain/deploy-a-smart-contract/install-and-use-metamask
+
+## ZkFair

@@ -31,8 +31,8 @@ import "@solidstate/hardhat-accounts";
 //   }
 // });
 
-// npx hardhat mint --network hardhat --contract 0x1254B32C48b9Ddf9314b8d4f3Fa52c31208f03f4
-task("mint-nft", "mint NFT on diffrent network")
+// npx hardhat mint-fun --network hardhat --contract 0x1254B32C48b9Ddf9314b8d4f3Fa52c31208f03f4
+task("mint-fun", "mint FunNFT on diffrent network")
   .addParam("contract", "NFT contract's address")
   // .addParam("count", "mint count")
   .setAction(async (taskArgs) => {
@@ -46,13 +46,53 @@ task("mint-nft", "mint NFT on diffrent network")
     console.log(`mint result: ${JSON.stringify(mintResult, null, 3)}`);
   });
 
+// npx hardhat mint-my --contract 0x8806C3ca36B712539121E0eC0D7179cb1D81659c --id 2 --network x1
+task("mint-my", "mint MyNFT on diffrent network")
+  .addParam("contract", "NFT contract's address")
+  .addParam("id", "Token Id")
+  // .addParam("count", "mint count")
+  .setAction(async (taskArgs) => {
+    // TODO: get network and browser url
+    // console.log(`network: ${network.name} args: ${JSON.stringify(config, null, 3)}`);
+    // process.exit(10);
+    const [deployer] = await ethers.getSigners();
+    const contractAddr = taskArgs.contract;
+    const tokenId = Number(taskArgs.id);
+    const contract = await ethers.getContractAt("MyNFT", contractAddr);
+    const mintResult = await contract.mint(deployer.address, tokenId);
+    console.log(`mint result: ${JSON.stringify(mintResult, null, 3)}`);
+  });
+
 // not good
 // import "hardhat-sourcify";
 
 // https://hardhat.org/hardhat-runner/docs/config
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.20",
+  // solidity: "0.8.20",
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.20",
+        // settings: {
+        //   viaIR: true,
+        //   optimizer: { enabled: true, runs: 1000000 },
+        // },
+      },
+    ],
+    overrides: {
+      "contracts/WUSDC.sol": {
+        version: "0.4.26",
+        // settings: {
+        //   viaIR: true,
+        //   optimizer: {
+        //     enabled: true,
+        //     runs: 1000000,
+        //   },
+        // },
+      },
+    },
+  },
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
@@ -61,16 +101,20 @@ const config: HardhatUserConfig = {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [deployer],
     },
-    x1: {
-      // https://testrpc.x1.tech
-      // https://x1testrpc.okx.com/
-      url: "https://testrpc.x1.tech",
-      accounts: [deployer]
-    },
     manta: {
       url: "https://pacific-rpc.manta.network/http",
       accounts: [deployer]
-    }
+    },
+    // testnet
+    x1: {
+      // url: "https://x1testrpc.okx.com/",
+      url: "https://testrpc.x1.tech",
+      accounts: [deployer]
+    },
+    "zkfair-testnet": {
+      url: "https://testnet-rpc.zkfair.io",
+      accounts: [deployer]
+    },
   },
   etherscan: {
     apiKey: etherscan_api_key,
