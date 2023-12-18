@@ -105,3 +105,24 @@ deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
 ## Network: zkfair-testnet Time: Sat Dec 16 2023 22:58:18 GMT+0800 (China Standard Time) 
 WUSDC contract-address: 0x9e1f1AB94BC3F2A4D1966F8F7c36c69dB651d45F 
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+
+## Network: zkfair-testnet Time: Sun Dec 17 2023 20:48:48 GMT+0800 (China Standard Time) 
+contract-address: 0x21453160d32491E55797AaE3076c1759A8e504d3 
+Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: zkfair-testnet Time: Mon Dec 18 2023 10:43:34 GMT+0800 (China Standard Time) 
+contract-address: 0xB9Fe2A417fE11708CACCB1628Ba07c702cBEbD96 
+Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: zkfair-testnet Time: Mon Dec 18 2023 11:13:07 GMT+0800 (China Standard Time) 
+contract-address: 0x00a367503017F5f5dcDfC55f3bb7725bbB10F289 
+Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: zkfair-testnet Time: Mon Dec 18 2023 16:51:49 GMT+0800 (China Standard Time) 
+contract-address: 0xb386A97ba7F2D8189F73B54E6dD41657ED439825 
+Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2

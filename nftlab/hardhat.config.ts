@@ -1,5 +1,4 @@
 
-// import { ethers } from "hardhat";
 import { HardhatUserConfig, vars } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
@@ -34,27 +33,25 @@ import "@solidstate/hardhat-accounts";
 // npx hardhat mint-fun --network hardhat --contract 0x1254B32C48b9Ddf9314b8d4f3Fa52c31208f03f4
 task("mint-fun", "mint FunNFT on diffrent network")
   .addParam("contract", "NFT contract's address")
-  // .addParam("count", "mint count")
+  .addParam("count", "mint count")
+  .addOptionalParam("target", "taget user address")
   .setAction(async (taskArgs) => {
-    // TODO: get network and browser url
-    // console.log(`network: ${network.name} args: ${JSON.stringify(config, null, 3)}`);
-    // process.exit(10);
     const [deployer] = await ethers.getSigners();
     const contractAddr = taskArgs.contract;
     const contract = await ethers.getContractAt("FunNFT", contractAddr);
-    const mintResult = await contract.mint(deployer.address, 3);
-    console.log(`mint result: ${JSON.stringify(mintResult, null, 3)}`);
+    const count = Number(taskArgs.count);
+    const target = taskArgs.target ?? deployer.address
+    console.log(`minting ${count} FunNFT to address: ${target} ...`);
+    const mintResult = await contract.mint(target, count);
+    // TODO: get explorer url
+    console.log(`mint FunNFT to ${target} tx: ${mintResult.hash} \ndetail: ${JSON.stringify(mintResult, null, 3)}`);
   });
 
 // npx hardhat mint-my --contract 0x8806C3ca36B712539121E0eC0D7179cb1D81659c --id 2 --network x1
 task("mint-my", "mint MyNFT on diffrent network")
   .addParam("contract", "NFT contract's address")
   .addParam("id", "Token Id")
-  // .addParam("count", "mint count")
   .setAction(async (taskArgs) => {
-    // TODO: get network and browser url
-    // console.log(`network: ${network.name} args: ${JSON.stringify(config, null, 3)}`);
-    // process.exit(10);
     const [deployer] = await ethers.getSigners();
     const contractAddr = taskArgs.contract;
     const tokenId = Number(taskArgs.id);
@@ -69,7 +66,6 @@ task("mint-my", "mint MyNFT on diffrent network")
 // https://hardhat.org/hardhat-runner/docs/config
 
 const config: HardhatUserConfig = {
-  // solidity: "0.8.20",
   solidity: {
     compilers: [
       {

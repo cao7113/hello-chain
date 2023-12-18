@@ -1,15 +1,17 @@
 # https://taskfile.dev
 version: "3"
 tasks:
-  dp-sepolia: npx hardhat run scripts/deploy.ts --network sepolia
-  dp-local: npx hardhat run scripts/deploy.ts
+  dp-sepolia: npx hardhat run scripts/deploy-FunNFT.ts --network sepolia
+  dp-local: npx hardhat run scripts/deploy-FunNFT.ts --network hardhat
   dplog: tail -30 scripts/deploy.md
   t: REPORT_GAS=true npx hardhat test
   sh: npx hardhat console
   build: npx hardhat compile
-  mint: npx hardhat run scripts/mint.ts --network sepolia
+  # mint: npx hardhat mint-fun --contract xxx --network sepolia
   accounts: npx hardhat accounts
   cover: npx hardhat coverage
+  dp-fair: npx hardhat run scripts/deploy-FunNFT.ts --network zkfair-testnet
+  # npx hardhat mint-fun --contract 0xb386A97ba7F2D8189F73B54E6dD41657ED439825 --network zkfair-testnet --count 2 --target 0x4666C260cDA46a9d1C6E71Af38ffe4631811A96b
 
   setup:
     cmds:
@@ -21,4 +23,4 @@ tasks:
         npm install @openzeppelin/contracts
 
         npm install --save-dev @solidstate/hardhat-accounts
-        npm install --save-dev hardhat-sourcify
+        # npm install --save-dev hardhat-sourcify
