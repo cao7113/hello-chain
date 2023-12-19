@@ -126,3 +126,8 @@ deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
 contract-address: 0xb386A97ba7F2D8189F73B54E6dD41657ED439825 
 Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: zkfair-testnet Time: Tue Dec 19 2023 08:43:33 GMT+0800 (China Standard Time) 
+contract-address: 0xA1cC8E4721603CdD973940fC678d341046fCb5E8 
+Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2

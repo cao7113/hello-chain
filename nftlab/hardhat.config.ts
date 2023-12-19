@@ -111,6 +111,10 @@ const config: HardhatUserConfig = {
       url: "https://testnet-rpc.zkfair.io",
       accounts: [deployer]
     },
+    zkfair: {
+      url: "https://rpc.zkfair.io",
+      accounts: [deployer]
+    },
   },
   etherscan: {
     apiKey: etherscan_api_key,
