@@ -14,7 +14,8 @@ const INFURA_API_KEY = vars.get("INFURA_API_KEY");
 // To export your private key from Metamask, open Metamask and
 // go to Account Details > Export Private Key
 // Beware: NEVER put real Ether into testing accounts
-const deployer = vars.get("SEPOLIA_PRIVATE_KEY");
+const deployer = vars.get("DEPLOYER_PRIVATE_KEY");
+// const deployer = process.env.DEPLOYER_PRIVATE_KEY;
 
 const etherscan_api_key = vars.get("ETHERSCAN_API_KEY");
 
@@ -47,7 +48,7 @@ task("mint-fun", "mint FunNFT on diffrent network")
     console.log(`mint FunNFT to ${target} tx: ${mintResult.hash} \ndetail: ${JSON.stringify(mintResult, null, 3)}`);
   });
 
-// npx hardhat mint-my --contract 0x8806C3ca36B712539121E0eC0D7179cb1D81659c --id 2 --network x1
+// npx hardhat mint-my --contract 0x8806C3ca36B712539121E0eC0D7179cb1D81659c --id 2 --network x1-testnet
 task("mint-my", "mint MyNFT on diffrent network")
   .addParam("contract", "NFT contract's address")
   .addParam("id", "Token Id")
@@ -91,18 +92,13 @@ const config: HardhatUserConfig = {
   },
   defaultNetwork: "hardhat",
   networks: {
-    hardhat: {
+    "hardhat": {
     },
-    sepolia: {
+    "sepolia": {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [deployer],
     },
-    manta: {
-      url: "https://pacific-rpc.manta.network/http",
-      accounts: [deployer]
-    },
-    // testnet
-    x1: {
+    "x1-testnet": {
       // url: "https://x1testrpc.okx.com/",
       url: "https://testrpc.x1.tech",
       accounts: [deployer]
@@ -111,8 +107,14 @@ const config: HardhatUserConfig = {
       url: "https://testnet-rpc.zkfair.io",
       accounts: [deployer]
     },
-    zkfair: {
+    // mainnets
+    "zkfair": {
       url: "https://rpc.zkfair.io",
+      gasPrice: 2000000,
+      accounts: [deployer]
+    },
+    "manta": {
+      url: "https://pacific-rpc.manta.network/http",
       accounts: [deployer]
     },
   },

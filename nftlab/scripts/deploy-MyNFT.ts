@@ -1,6 +1,6 @@
-// npx hardhat run scripts/deploy.ts --network x1
+// npx hardhat run scripts/deploy.ts --network x1-testnet
 // or
-// HARDHAT_NETWORK=x1 node scripts/deploy.ts
+// HARDHAT_NETWORK=x1-testnet node scripts/deploy.ts
 
 import { ethers } from "hardhat";
 import * as fs from 'fs';
