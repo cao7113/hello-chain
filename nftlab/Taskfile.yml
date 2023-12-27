@@ -6,7 +6,8 @@ tasks:
   dplog: tail -30 scripts/deploy.md
   t: REPORT_GAS=true npx hardhat test
   sh: npx hardhat console
-  build: npx hardhat compile
+  install: npm install
+  hh-build: npx hardhat compile
   # mint: npx hardhat mint-fun --contract xxx --network sepolia
   accounts: npx hardhat accounts
   cover: npx hardhat coverage

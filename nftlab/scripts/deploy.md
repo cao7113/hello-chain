@@ -150,3 +150,8 @@ deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
 contract-address: 0x4B8763334Fee8e52d604342e69f968D06E7eAec0 
 Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
 deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2
+
+## Network: x1-testnet Time: Tue Dec 26 2023 15:41:23 GMT+0800 (China Standard Time) 
+contract-address: 0x21CE7aef11df468a5dEDe6746eA878c24acEe8f1 
+Info: ["Make fun with NFT", "FunNFT", "https://test-tokens-metadata.vercel.app/api/erc721/"] 
+deployer account: 0xc41a6Ce1E045f9b0c9629b4c08518aee9D259aF2

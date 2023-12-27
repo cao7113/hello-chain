@@ -88,6 +88,16 @@ const config: HardhatUserConfig = {
         //   },
         // },
       },
+      "contracts/WOKB.sol": {
+        version: "0.4.26",
+        // settings: {
+        //   viaIR: true,
+        //   optimizer: {
+        //     enabled: true,
+        //     runs: 1000000,
+        //   },
+        // },
+      },
     },
   },
   defaultNetwork: "hardhat",
@@ -97,11 +107,6 @@ const config: HardhatUserConfig = {
     "sepolia": {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [deployer],
-    },
-    "x1-testnet": {
-      // url: "https://x1testrpc.okx.com/",
-      url: "https://testrpc.x1.tech",
-      accounts: [deployer]
     },
     "zkfair-testnet": {
       url: "https://testnet-rpc.zkfair.io",
@@ -116,6 +121,12 @@ const config: HardhatUserConfig = {
     "manta": {
       url: "https://pacific-rpc.manta.network/http",
       accounts: [deployer]
+    },
+    "x1-testnet": {
+      // url: "https://x1testrpc.okx.com/",
+      url: "https://testrpc.x1.tech",
+      accounts: [deployer],
+      // gasPrice: 2000000,
     },
   },
   etherscan: {
