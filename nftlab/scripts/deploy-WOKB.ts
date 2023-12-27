@@ -11,8 +11,8 @@ async function main() {
 
   const contentToAppend = `
 ## Network: ${network.name} Time: ${new Date().toISOString()} 
-WOKB contract-address: ${deployedContract.target} 
-deployer account: ${deployer.address}
+WOKB contract-address: ${String(deployedContract.target).toLocaleLowerCase()} 
+deployer account: ${String(deployer.address).toLocaleLowerCase()}
 `;
   console.log(contentToAppend);
 
